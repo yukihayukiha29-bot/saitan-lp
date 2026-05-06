@@ -1,0 +1,5 @@
+rendered_saitan_sns/
+tmp_render/
+*.docx
+server.*.log
+build_saitan_sns_doc.py
