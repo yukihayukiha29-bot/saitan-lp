@@ -313,6 +313,32 @@ h3 {
   padding: clamp(68px, 8vw, 104px) 24px;
 }
 
+.page-hero {
+  padding: clamp(72px, 9vw, 120px) 24px clamp(54px, 7vw, 84px);
+  text-align: center;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255, 216, 90, 0.62) 0 42px, transparent 44px),
+    radial-gradient(circle at 88% 70%, rgba(22, 191, 183, 0.2) 0 86px, transparent 88px),
+    linear-gradient(135deg, #edfffc 0%, #ffffff 100%);
+}
+
+.page-hero h1 {
+  max-width: 940px;
+  margin: 0 auto 20px;
+  color: var(--ink);
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1.18;
+  text-shadow: none;
+}
+
+.page-hero p:not(.eyebrow) {
+  max-width: 780px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 18px;
+  font-weight: 800;
+}
+
 .section-heading {
   max-width: 820px;
   margin: 0 auto 36px;
@@ -322,6 +348,50 @@ h3 {
 .section-heading > p:not(.eyebrow) {
   margin-inline: auto;
   max-width: 760px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.home-links,
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-links a,
+.detail-grid article {
+  min-height: 230px;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(8, 114, 108, 0.08);
+}
+
+.home-links span,
+.detail-grid span {
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  color: var(--teal-dark);
+  background: var(--mint);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.home-links strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 23px;
+  line-height: 1.35;
+}
+
+.home-links p,
+.detail-grid p {
+  margin-bottom: 0;
   color: var(--muted);
   font-weight: 700;
 }
@@ -658,6 +728,14 @@ h3 {
   padding: 28px;
 }
 
+.price-grid.compact .plan {
+  min-height: 300px;
+}
+
+.voice-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .plan h3 {
   color: var(--teal-dark);
   font-size: 28px;
@@ -960,7 +1038,10 @@ details p {
 
   .problem-grid,
   .price-grid,
-  .voice-grid {
+  .voice-grid,
+  .voice-grid.compact,
+  .home-links,
+  .detail-grid {
     grid-template-columns: 1fr;
   }
 
